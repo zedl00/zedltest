@@ -1,0 +1,33 @@
+<div class="container p-4">
+    <div class="row">
+
+        {{#each votantes}}
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <a href="{{ id }}" target="_blank">
+                            <h4 class="card-title text-uppercas">
+                                {{ nombre }} {{ apellido }}
+                            </h4>
+                        </a>
+                        <p class="m-10"> Cedula : {{ cedula }}</p>
+                        <p class="m-2"> Celular : {{ celular }}</p>
+                        <p class="m-2">{{ direccion }}</p>
+                        <p>{{ timeago fecha_creado }}</p>
+                        <a href="/votantes/delete/{{ id }}" class="btn btn-danger">Borrar Votante</a>
+                        <a href="/votantes/edit/{{ id }}" class="btn btn-secondary">Editar</a>
+                    </div>
+                </div>       
+            </div>
+
+            {{ else }}
+            <div class="col-md-4 mx-auto">
+                <div class="card card-body text-center">
+                    <p>No existen Votantes guardados aun !</p>
+                    <a href="/votantes/add">Crear Uno</a>
+                </div>
+
+            </div>
+        {{/each}}
+    </div>
+</div>
