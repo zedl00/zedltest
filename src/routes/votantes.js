@@ -62,9 +62,8 @@ router.get('/', isLoggedIn, async (req, res) => {
 router.get('/listado', isLoggedIn, async (req, res) => {
     const votantes = await pool.query('SELECT * FROM votantes WHERE user_id = ?', [req.user.id]); 
     //res.send('Listas Iran aqui.')
-    
-    //console.log(votantes);
-    
+    /*console.log(votantes); */
+     
     res.render('votantes/listh', { votantes });
 });
 
