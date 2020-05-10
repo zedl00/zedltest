@@ -1,7 +1,14 @@
+/*
+- Index principal web
+- Logo Sumate/FP
+- Pagination
+- Buscador
+
+*/
 body {
     background: #f5f6f5;
     font-family: 'Oswald', sans-serif;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .index {

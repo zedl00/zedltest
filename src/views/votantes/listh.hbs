@@ -1,0 +1,38 @@
+<div class="container p-4">
+    <div class="row">
+
+
+        <div>
+            <table>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Cedula</th>
+                    <th>Celular</th>
+                    <th>Profesion</th>
+                    <th>Borrar</th>
+                    <th>Editar</th>
+                </tr>
+                {{#each votantes}}
+                <tr>
+                    <td>{{ nombre }}</td>
+                    <td>{{ apellido }}</td>
+                    <td>{{ cedula }}</td>
+                    <td>{{ celular }}</td>
+                    <td>{{ profesion }}</td>
+                    <td><a href="/votantes/delete/{{ id }}" class="btn btn-danger">Borrar Votante</a></td>
+                    <td><a href="/votantes/edit/{{ id }}" class="btn btn-secondary">Editar</a></td>
+                </tr>
+            </table>
+        </div>
+        {{ else }}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No existen Votantes guardados aun !</p>
+                <a href="/votantes/add">Crear Uno</a>
+            </div>
+
+        </div>
+        {{/each}}
+    </div>
+</div>
